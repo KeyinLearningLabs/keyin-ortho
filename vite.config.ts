@@ -16,7 +16,10 @@ export default defineConfig(({ mode }) => {
       outDir: env.VITE_OUTDIR.toString()
     },
     server: {
-      open: true
+      open: true,
+      proxy: {
+        '/api': 'http://localhost:3000'
+      }
     },
     optimizeDeps: {
       exclude: ['js-big-decimal']
