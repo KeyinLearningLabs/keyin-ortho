@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mw-1280 {
+  max-width: 1280px;
+  margin: 0 auto !important;
+  float: none !important;
+}
+
+body {
+  @apply h-full text-base font-barlowSemi text-keyin-black;
+  background: #fafafa;
+  /* @apply bg-base-content */
+}
+
+input {
+  @apply border border-keyin-light-gray;
+}
+
+.title {
+  @apply w-full p-4 mb-5 font-semibold font-barlowSemi sm:text-4xl md:text-5xl lg:text-6xl text-keyin-white bg-keyin-black bg-opacity-60;
+}
+
+.button {
+  @apply font-semibold rounded-md shadow-md btn btn-primary text-keyin-white font-barlow;
+}
+
+h1 {
+  @apply text-3xl font-semibold text-keyin-bright-blue font-barlowSemi;
+}
+
+h2 {
+  @apply text-2xl font-semibold text-keyin-green font-barlowSemi;
+}
+
+h3 {
+  @apply text-lg font-semibold font-barlowSemi;
+}
+
+p {
+  @apply text-lg text-keyin-black font-barlowSemi;
+}
+
+ol {
+  @apply px-8 text-lg list-decimal text-keyin-black font-barlowSemi;
+}
+
+label {
+  @apply mb-6 text-lg font-barlowSemi;
+}
+
+.success-li {
+  @apply font-barlowSemi;
+}
+
+select {
+  @apply w-full mb-6 bg-keyin-white input input-bordered border-keyin-gray;
+}
+
+textarea {
+  resize: none;
+}
+
+.react-tel-input .form-control {
+  width: 100% !important;
+}
+
+select:focus {
+  @apply text-keyin-gray;
+}
+
+.phone-input {
+  @apply w-full mb-6 bg-keyin-white input-bordered rounded-lg border-keyin-gray shadow-none !important;
+}
+
+.phone-input:focus {
+  outline-style: solid !important;
+  outline-width: 2px !important;
+  outline-offset: 2px !important;
+  outline-color: #98a2b3 !important;
+}
+
+textarea {
+  @apply w-full mb-6 rounded-lg bg-keyin-white textarea textarea-bordered border-keyin-gray;
+}
+
+textarea:focus {
+  @apply text-keyin-gray;
+}
+
+.highlight {
+  @apply p-4 mb-2 text-xl rounded badge badge-warning font-barlow;
+}
+
+/* Components */
+hr {
+  @apply mt-16 mb-16 border-dashed divider border-keyin-gray;
+}
+
+card {
+  @apply w-auto shadow-md card bg-keyin-white;
+}
+
+.signature-canvas {
+  @apply flex flex-row w-full rounded border-keyin-gray;
+}
+
+.flag-dropdown {
+  height: 50px;
+}
+
+@keyframes blink {
+  50% {
+    color: transparent;
+  }
+}
+
+.loader__dot {
+  animation: 1s blink infinite;
+}
+
+.loader__dot:nth-child(2) {
+  animation-delay: 250ms;
+}
+
+.loader__dot:nth-child(3) {
+  animation-delay: 500ms;
+}
+
+.signature-canvas {
+  @apply relative;
+  width: 40vh;
+  /* Make the canvas width responsive */
+  padding-right: 50%;
+  padding-top: 30vh;
+  /* This sets the height as a percentage of the width, maintaining an aspect ratio */
+}
+
+.signature-canvas canvas {
+  @apply absolute top-0 left-0 w-full h-full rounded-lg border-keyin-gray;
+}
+
+/* Errors */
+
+.error {
+  @apply border-2 border-keyin-red scroll-mt-8 !important;
+}
+
+.error-message {
+  @apply pl-2 -mt-5 font-semibold text-keyin-red font-barlowSemi;
+}
