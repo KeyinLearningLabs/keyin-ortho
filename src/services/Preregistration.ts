@@ -25,7 +25,6 @@ export interface OrthoPreRegistrationForm {
 export const createOrthoPreRegistration = async (orthoData: OrthoPreRegistrationForm) => {
   try {
     const response = await axios.post('/api/v1/admin/pre-registration/ortho', orthoData)
-    console.log('✅ API call successful:', response.data)
     return response.data
   } catch (error: any) {
     throw error
