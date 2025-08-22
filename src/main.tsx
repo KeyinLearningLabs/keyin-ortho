@@ -7,6 +7,8 @@ import axios from 'axios'
 import { NavBar } from './components/shared/NavBar'
 import PreRegister from './layouts/preregister'
 
+// Set baseURL for API calls
+console.log('🔧 VITE_API_URL:', import.meta.env.VITE_API_URL)
 axios.defaults.baseURL = import.meta.env.VITE_API_URL
 axios.defaults.withCredentials = true
 

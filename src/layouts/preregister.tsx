@@ -67,7 +67,7 @@ const PreRegister = () => {
     completed_da: null,
     resident: null,
     eligible: null,
-    declaration: null
+    declaration: false
   })
 
   // Function to scroll to first error
@@ -127,9 +127,7 @@ const PreRegister = () => {
 
   // Initial form values based on user type
   const getInitialValues = (): OrthoPreRegistrationForm => {
-    const baseValues = formValues
-
-    return baseValues
+    return formValues
   }
 
   // Validation schema - updated for phone format
@@ -170,7 +168,12 @@ const PreRegister = () => {
     const orthoPayload = {
       ...values,
       mobile_phone: formattedPhoneNumber,
-      home_phone: formattedHomePhone
+      home_phone: formattedHomePhone,
+      active_da: values.active_da === null ? false : Boolean(values.active_da),
+      completed_da: values.completed_da === null ? false : Boolean(values.completed_da),
+      resident: values.resident === null ? false : Boolean(values.resident),
+      eligible: values.eligible === null ? false : Boolean(values.eligible),
+      declaration: values.declaration === null ? false : Boolean(values.declaration)
     }
 
     try {
@@ -192,7 +195,7 @@ const PreRegister = () => {
   }
 
   return (
-    <div className="p-6 max-w-4xl min-h-screen mw-1280 bg-keyin-white">
+    <div className="max-w-4xl min-h-screen p-6 mw-1280 bg-keyin-white">
       {error && (
         <div className="p-4 mb-4 text-red-700 bg-red-100 rounded-lg">
           <p>{error}</p>
@@ -200,7 +203,7 @@ const PreRegister = () => {
       )}
 
       {success && (
-        <div className="flex fixed inset-0 z-50 justify-center items-center bg-opacity-30 bg-keyin-black">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-30 bg-keyin-black">
           <div className="flex flex-col p-3 rounded-md bg-keyin-white">
             <div className="p-6 mb-4 bg-green-100 rounded-lg">
               <h2 className="mb-4 text-2xl font-bold text-green-800">Application Submitted Successfully!</h2>
@@ -236,7 +239,7 @@ const PreRegister = () => {
                   setSubmissionData(null)
                   window.location.href = '/'
                 }}
-                className="px-6 py-2 w-1/3 font-semibold rounded text-keyin-white bg-keyin-blue hover:brightness-90 hover:shadow-md focus:outline-none"
+                className="w-1/3 px-6 py-2 font-semibold rounded text-keyin-white bg-keyin-blue hover:brightness-90 hover:shadow-md focus:outline-none"
               >
                 Close
               </button>
@@ -246,7 +249,7 @@ const PreRegister = () => {
       )}
 
       <>
-        <div className="flex flex-col gap-y-3 pb-4 text-left">
+        <div className="flex flex-col pb-4 text-left gap-y-3">
           <h2 className="text-3xl text-center text-keyin-bright-blue">
             Welcome to the Orthodontic Module for Dental Assistants Pre-Registration!
           </h2>

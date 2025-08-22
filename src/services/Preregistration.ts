@@ -15,14 +15,19 @@ export interface OrthoPreRegistrationForm {
   postcode: string
   country: string
   subject: string
-  active_da: boolean
-  completed_da: boolean
-  resident: boolean
-  eligible: boolean
-  declaration: boolean
+  active_da: boolean | null
+  completed_da: boolean | null
+  resident: boolean | null
+  eligible: boolean | null
+  declaration: boolean | null
 }
 
 export const createOrthoPreRegistration = async (orthoData: OrthoPreRegistrationForm) => {
-  const response = await axios.post('/api/v1/admin/table/pre-registrations/ortho', orthoData)
-  return response.data
+  try {
+    const response = await axios.post('/api/v1/admin/pre-registration/ortho', orthoData)
+    console.log('✅ API call successful:', response.data)
+    return response.data
+  } catch (error: any) {
+    throw error
+  }
 }

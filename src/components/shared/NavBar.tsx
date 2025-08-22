@@ -39,7 +39,7 @@ export const NavBar = () => {
   return (
     <div className="sticky top-0 z-50 bg-keyin-white navbar h-min">
       <div className="ml-3 navbar-start">
-        <a href="https://hnl.keyin.com">
+        <a href="/">
           <img src={keyinLogo} className="p-0 m-0 btn btn-ghost" alt="Keyin Logo" />
         </a>
       </div>
