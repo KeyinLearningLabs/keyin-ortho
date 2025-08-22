@@ -2,15 +2,25 @@ const IndividualProgram = () => {
   return (
     <>
       <div className="flex flex-col items-center mx-5">
-        <h1 className="mt-20 text-center text-keyin-red">AI for Tourism Training</h1>
-        <h1 className="text-center text-keyin-black">Power of AI for Tourism: Your New Superpower!</h1>
-        <p className="text-center text-xl">
-          <i>Brand new for August & September 2025!</i> In just four lively weeks, owners, managers, and front-line
-          staff will discover how GPT prompts, smart automations, and data-driven insights can streamline operations,
-          delight guests, and reclaim hours of productivity. We've blended the most loved modules from{' '}
-          <strong className="font-semibold">Front Line Staff Training</strong> and{' '}
-          <strong className="font-semibold">Tourism Marketing</strong>-all returned through an AI lens. No tech
-          background required.
+        <h1 className="mt-20 text-center text-keyin-bright-blue">Program Delivery</h1>
+        <p className="mb-6 text-xl text-center">
+          The theory portion of the program is delivered as a guided, self-study course via our e-Class platform. This
+          online, self-paced format allows participants to progress through the content on their own schedule, with no
+          in-person attendance required. Learners will have access to all digital materials for one full year from the
+          date of enrollment, providing flexibility and ample time for review and preparation.
+        </p>
+        <p className="mb-6 text-xl text-center">
+          After passing the written theory exam, students become eligible to register for the in-person clinical
+          component. This hands-on training session is delivered in a supervised clinical environment, where
+          participants will develop and demonstrate essential orthodontic assisting skills.
+        </p>
+        <p className="text-xl text-center">
+          Theory Exams are held on-line each Friday 9:00 – 12:00. The exam must be completed a minimum of three weeks
+          before attending the in-person clinical component. Once you pass, you are assigned to the next available
+          clinical portion. It is strongly recommended that students begin the theory component at least three months
+          prior to their anticipated exam date. This allows sufficient time to absorb the content and prepare for the
+          written theory examination. Successful completion of the exam is a prerequisite for moving on to the clinical
+          portion of the module.
         </p>
       </div>
     </>
