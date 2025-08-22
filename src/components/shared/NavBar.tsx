@@ -1,5 +1,4 @@
 import keyinLogo from '../../assets/logo.png'
-import hnlLogo from '../../assets/HNL_LOGO.png'
 import { useEffect, useState } from 'react'
 import { ContactButtons } from './ContactButtons'
 
@@ -45,7 +44,7 @@ export const NavBar = () => {
       </div>
       <div className="hidden navbar-center bg-keyin-white lg:flex"></div>
       <div className="flex items-center navbar-end">
-        {isForm ? <img src={hnlLogo} className="h-[120px] m-0 p-0 " alt="HNL Logo" /> : <ContactButtons />}
+        {isForm ? <img className="h-[120px] m-0 p-0 " /> : <ContactButtons />}
       </div>
     </div>
   )

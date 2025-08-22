@@ -226,8 +226,8 @@ const PreRegister = () => {
               </ul>
               <p>
                 If you have any questions, feel free to reach out to us at{' '}
-                <a href="mailto:microcreds@keyin.com" className="font-semibold text-keyin-bright-blue">
-                  microcreds@keyin.com
+                <a href="mailto:dentalupskilling@keyin.com " className="font-semibold text-keyin-bright-blue">
+                  dentalupskilling@keyin.com
                 </a>{' '}
                 We look forward to supporting you on your learning journey!{' '}
               </p>

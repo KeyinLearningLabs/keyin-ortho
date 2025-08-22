@@ -29,8 +29,8 @@ const ConflictModal: React.FC<ConflictModalProps> = ({ onClose, conflictDetails 
           </p>
           <p className="mb-4 text-keyin-gray">
             If you require assistance, please contact us at{' '}
-            <a href="mailto:devs@keyin.com" className="font-semibold text-keyin-bright-blue">
-              microcreds@keyin.com
+            <a href="mailto:dentalupskilling@keyin.com " className="font-semibold text-keyin-bright-blue">
+              dentalupskilling@keyin.com
             </a>
             .
           </p>
@@ -157,8 +157,8 @@ const ConflictModal: React.FC<ConflictModalProps> = ({ onClose, conflictDetails 
             <p className="text-keyin-gray">
               You are already enrolled in a cohort for this program. If you would like to change your cohort, please
               contact{' '}
-              <a href="mailto:devs@keyin.com" className="font-semibold text-keyin-bright-blue">
-                microcreds@keyin.com
+              <a href="mailto:dentalupskilling@keyin.com " className="font-semibold text-keyin-bright-blue">
+                dentalupskilling@keyin.com
               </a>
               .
             </p>{' '}
