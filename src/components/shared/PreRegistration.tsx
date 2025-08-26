@@ -35,16 +35,16 @@ const PreRegistration = () => {
         {/* Right Column: Circle & Program Details */}
         <div className="flex flex-col items-center justify-start w-full mt-6 sm:mt-12">
           {/* Circle Badge */}
-          <div className="flex items-center justify-center w-64 h-64 text-center border-8 border-black rounded-full">
-            <div className="px-2 space-y-1 leading-tight">
+          <div className="flex items-center justify-center w-[18rem] h-[18rem] text-center border-8 border-[#1f2d4c] rounded-full">
+            <div className="px-2 space-y-1 leading-[1.3]">
               <div>
-                <span className="text-4xl font-semibold text-keyin-bright-blue">Funding </span>
+                <span className="text-[2.5rem] font-semibold text-[#1f2d4c]">Funding </span>
               </div>
               <div>
-                <span className="text-4xl font-semibold text-keyin-bright-blue">options may be</span>
+                <span className="text-[2.5rem] font-semibold text-[#1f2d4c]">options may be</span>
               </div>
               <div>
-                <span className="text-4xl font-semibold text-keyin-bright-blue">available!</span>
+                <span className="text-[2.5rem] font-semibold text-[#1f2d4c]">available!</span>
               </div>
             </div>
           </div>
