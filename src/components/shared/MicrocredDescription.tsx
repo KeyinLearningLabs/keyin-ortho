@@ -1,7 +1,7 @@
 const MicrocredDescription = () => {
   return (
     <>
-      <div className="mx-5 text-center">
+      <div className="mx-5">
         <h1 className="mt-10 text-keyin-bright-blue">Certification</h1>
         <p className="mb-6 text-xl">
           Upon successful completion, participants will receive a certificate acknowledging their proficiency in
@@ -124,6 +124,13 @@ const MicrocredDescription = () => {
         </div>
 
         <br />
+        <div className="mx-5 mb-10">
+          <h1 className="mt-10 text-keyin-bright-blue">Prerequisites</h1>
+          <ol className="space-y-2 list-disc list-inside">
+            <li>Active registration as a Level II Dental Assistant in Newfoundland and Labrador.</li>
+            <li>Completion of foundational dental assisting education.</li>
+          </ol>
+        </div>
       </div>
     </>
   )

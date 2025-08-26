@@ -9,6 +9,9 @@ const PreRegistration = () => {
             participants with the knowledge and clinical skills required to support orthodontic procedures within the
             dental practice, in alignment with current Newfoundland and Labrador regulations.
           </p>
+          <p className="mx-2 text-xl leading-relaxed sm:mx-0 text-keyin-bright-blue">
+            Delivery Method: Hybrid Program Length: 45 Hours
+          </p>
 
           {/* Call to Action */}
           <div className="mt-8">
@@ -37,17 +40,11 @@ const PreRegistration = () => {
           <div className="flex items-center justify-center w-64 h-64 text-center border-8 border-black rounded-full">
             <div className="px-2 space-y-1 leading-tight">
               <div>
-                <span className="text-3xl text-keyin-bright-blue">Approximately</span>
+                <span className="text-3xl font-semibold text-keyin-bright-blue">Funding options </span>
               </div>
               <div>
-                <span className="text-3xl text-keyin-bright-blue">45</span>
+                <span className="text-3xl font-semibold text-keyin-bright-blue">may be available!</span>
               </div>
-              <div>
-                <span className="text-3xl text-keyin-bright-blue">hours</span>
-              </div>
-              {/* <div>
-                <span className="text-3xl font-semibold text-keyin-red">available!</span>
-              </div> */}
             </div>
           </div>
 
