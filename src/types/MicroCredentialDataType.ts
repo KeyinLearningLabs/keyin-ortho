@@ -1,8 +1,8 @@
-import axios from 'axios'
-import { Program, Subjects, getProgramById } from '../data/calls/getAllPrograms'
-import { getAllSubjectsV2 } from '../data/calls/subjects'
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 
-import { Programs } from '../types/ProgramTypes'
+import axios from 'axios'
+
+import { Program, Programs } from '../types/ProgramTypes'
 
 export type MicrocredentialDataType = {
   img: string
@@ -71,35 +71,6 @@ export const getMicroCredentials = async () => {
   try {
     const response = await axios.get('/api/v2/programs/microcredential')
     return response.data
-  } catch (error) {
-    console.error(error)
-  }
-}
-
-export const getMicroCredentialBySubject = async () => {
-  try {
-    const subjectsResponse = await getAllSubjectsV2({
-      limit: 0,
-      offset: 0
-    })
-    if (!subjectsResponse || !subjectsResponse.data) {
-      throw new Error('Failed to fetch subjects data')
-    }
-    const subjects = subjectsResponse.data
-    const programIds = subjects.map((subject: Subjects) => subject.program_id)
-    const programChunks = chunkArray(programIds, CHUNK_SIZE)
-    const programRequests = programChunks.flatMap((chunk) => chunk.map((id) => getProgramById(id as string)))
-    const programsResponses = await Promise.all(programRequests)
-    const programs = programsResponses
-      .flatMap((response) => {
-        const data = response.data || response
-        return data
-      })
-      .filter((program) => {
-        return program !== undefined
-      })
-    const microCredentialPrograms = programs.filter((program: Program) => program.category === 'Micro-credential')
-    return microCredentialPrograms
   } catch (error) {
     console.error(error)
   }

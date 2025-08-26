@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { Program, getProgramByName } from '../data/calls/getAllPrograms'
 import { getToken } from '../types/apps'
 
 const token = getToken('accessToken')
@@ -195,33 +194,6 @@ export const getDocumentIdArray = async (id_array: DocumentResponse[]) => {
   }
 }
 
-export const getRequiredDocuments = async (params: RequiredDocumentsRequestHeaders) => {
-  try {
-    const token = getToken('accessToken')
-    const headers = {
-      Authorization: `Bearer ${token}`
-    }
-
-    let queryParams = ''
-
-    if (params.programName && params.programName !== '--All--') {
-      const program = await getProgramByName(params.programName)
-      queryParams += `program_id=${program![0].id}`
-    }
-
-    if (params.type) {
-      queryParams += `&type=${params.type}`
-    }
-
-    const required_documents = await axios.get(`/api/v3/admin/documents/required?${queryParams}`, { headers })
-
-    return required_documents.data
-  } catch (error) {
-    console.error(error)
-    throw error
-  }
-}
-
 export const getDocumentsByProgramId = async (programId: string) => {
   try {
     const response = await axios.get(`/api/v3/admin/required-documents/${programId}`, {
@@ -344,11 +316,6 @@ export enum Status {
 
 export interface ApplicationEmail {
   documents: DocumentResponse[]
-}
-
-export interface RegistrationEmail {
-  documents: RegistrationDocumentResponse[]
-  program: Program
 }
 
 export interface FilesState {
