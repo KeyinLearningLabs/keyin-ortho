@@ -20,7 +20,7 @@ const MicrocredDescription = () => {
         </ol>
       </div>
       <div className="mx-5">
-        <h1 className="mt-10 text-center text-keyin-bright-blue">Course list</h1>
+        <h1 className="mt-10 text-keyin-bright-blue">Course list</h1>
 
         {/* Mobile: Single column layout */}
         <div className="md:hidden">
