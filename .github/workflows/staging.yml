@@ -35,6 +35,8 @@ jobs:
       - name: Build and Deploy Keyin Ortho
         run: |
           ssh deploy '
+          eval "$(ssh-agent -s)" &&
+          ssh-add ~/.ssh/keyin-ortho &&
           export NVM_DIR=~/.nvm && 
           source ~/.nvm/nvm.sh && 
           cd /var/www/keyin-ortho && 
