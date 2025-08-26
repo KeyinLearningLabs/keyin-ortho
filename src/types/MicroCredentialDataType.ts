@@ -1,5 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-
 import axios from 'axios'
 
 import { Program, Programs } from '../types/ProgramTypes'
